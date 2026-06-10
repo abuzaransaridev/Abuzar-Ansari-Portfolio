@@ -4,25 +4,28 @@
 
 	<head>
 
-		<title>My Home Page</title>
+		<title>Portfolio Website</title>
 		
-		<meta charset="UTF-8">
-		<meta http-equiv="refresh" content="40">	
+		<meta charset="UTF-8">		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="author" content="Abuzar Ansari">
 		<meta name="description" content="Free Web Page For Learning">
 		<meta name="keywords" content="HTML, CSS, JavaScript">
-
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<style>
+		
+			html {
+				scroll-behavior:smooth;
+			}
 			
 			*{
 				
 				margin:0;
 			}
-					
-
+							
+			
 			body {
-				background-color: #000000;
+				background: linear-gradient(135deg,#000000,#000000, #1e293b, #312e81);
 				color: white;
 				font-family: Arial, sans-serif;
 			}
@@ -37,8 +40,11 @@
 				text-align: center;
 				padding: 15px;
 				background-color: #222;
-				
-				
+			}
+			footer{
+				text-align: center;
+				padding: 15px;
+				background-color: #3c3939;
 			}
 
 			nav a {
@@ -48,35 +54,30 @@
 			}
 
 			nav a:hover {
-				color: pink;
-			}
-
-			.login-btn {
-				background-color: #443199;
-				color: white;
-				border: none;
-				padding: 8px 15px;
-				cursor: pointer;
-				border-radius: 5px;
+					color:rgba(3, 40, 225, 0.936);
 			}
 
 			#Home img {
 				width: 100%;
-				height: 600px;
+				height: 600px;				
+				height:auto;
 			}
+						
 
 			#About h1,.skil h1,.Project h1{
 				margin-bottom: 20px;
 			}
 
-			#About p {
+			.about p,.Education,.Contact {
 				line-height: 1.8;
 				font-size: 18px;
+				color:white;
+				
 			}
 			
-			.skil,.about,.Project,.EducationS{
+			.skil,.about,.Project,.Education,.Contact{
 				text-align: center;
-				padding: 50px;
+				padding: 60px;				
 			}
 			
 			.skill ,.projectp{
@@ -93,13 +94,63 @@
 				padding:50px;
 			}
 			
+			
+			.hero {
+				text-align: center;
+				padding:20px 20px 100px;
+			}
+
+			.hero h1 {
+				font-size: 60px;
+				margin-bottom: 20px;
+			}
+
+			.hero p {
+				font-size: 22px;
+				color: #cbd5e1;
+			}
+
+			.hero button {
+				margin-top: 20px;
+				padding: 12px 30px;
+				border: none;
+				border-radius: 10px;
+				background: #8b5cf6;
+				color: white;
+				cursor: pointer;
+				margin-right:10px;
+			}			
+			
+			#footer {
+				margin-top: 50px;
+				padding: 25px;
+				padding-left:50px;	
+				padding-right:50px;	
+				background: #111827;
+				color: #94a3b8;
+				display:flex;
+				justify-content:space-between;				
+			}			
+			.link a{
+				color:#94a3b8;
+				text-decoration:none;
+				margin:10px;
+			}				
+			.link a:hover{	
+				color:rgba(3, 40, 225, 0.936);
+					
+			}
+
+
+
+			
 		</style>
 	</head>
 
 	<body>
 
 		<header>
-			<h2>My Website</h2>
+			<h1>Portfolio Website</h1>
 		</header>
 
 		<nav>
@@ -108,16 +159,28 @@
 			<a href="#Skills">Skills</a>
 			<a href="#Education">Education</a>
 			<a href="#Projects">Projects</a>
-			<a href="#Contact">Contact</a>
-			<button class="login-btn">Login</button>
+			<a href="#Contact">Contact</a>			
+
 		</nav>
 
-		<div id="Home">
+		<main id="Home">
 		   
-			<img src="C:\Users\DELL\Downloads\image-home.png" alt="Home Photo">
-		</div>
+			<img src="image-home.png" alt="Home Photo">
+					
+			<div class="hero">
+				<h1>Hi, I'm Abuzar Ansari 👋</h1>
+				<p>BCS Student | Python Developer | Aspiring Full-Stack Developer</p>
+				<button class="login_btn">Hire Me</button>
+				<a href="#Projects">
+					<button>View Projects</button>
+				</a>					
+			<button class="login_btn">Resume</button>
+			</div>
+			
+		</main>
+			
 
-		<main id="About" class="about">
+		<section id="About" class="about">
 			<h1>About </h1>
 
 			<p>
@@ -128,7 +191,8 @@
 				I am excited to share my experiences, skills, and projects
 				with the world through this portfolio website.
 			</p>
-		</main>
+			
+		</section>
 		
 		<section id="Skills" class="skil">
 				<h1>Skills</h1>
@@ -140,16 +204,24 @@
 				<div class="skill">JavaScript</div>
 				<div class="skill">SQLite</div>
 				<div class="skill">Git & GitHub</div>
-				<div class="skill">Vsiual Studio Code</div>
+				<div class="skill">Visual Studio Code</div>
 				<div class="skill">Problem Solving</div>
 				<div class="skill">Basic UI Design</div>
 
 		</section>
 		
-		<section id="Education" class="EducationS">
-			<h1> Education</h1>
-		
+		<section id="Education" class="Education">
+			<h1>Education</h1>
+				<h3>Bachelor of Computer Science (BCS)</h3>
+				<p><strong>College:</strong>Rajiv Gandhi College of computer science, Aurangabad M.H INDIA</p>
+				<p><strong>University:</strong> Dr. Babasaheb Ambedkar Marathwada University</p>
+				<p><strong>Duration:</strong> 2024 - 2027</p>
+				<p><strong>CGPA:</strong> 8.7 / 10</p>
+				<p><strong>Relevant Coursework:</strong> Python, C Programming, Database Management Systems, Web Development, Software Engineering</p>
+
 		</section>
+		
+
 		
 		
 		<section id="Projects" class="Project">
@@ -159,17 +231,17 @@
 			<div class="projectp">
 				<h3>Library Management System</h3><br>
 				<p>Built using Python and SQLite.</p>
-			</div>				
+			</div>					
 			<div class="projectp">
 				<h3>Flipkart HomePage Clone  </h3><br>
 				<p>Built using HTML and CSS.</p>
 			</div>				
 			<div class="projectp">
-				<h3>Rstaurant Management System</h3><br>
+				<h3>Restaurant Management System</h3><br>	
 				<p>Built using Python and SQLite.</p>
 			</div>			
 			<div class="projectp">
-				<h3>Bike & Car Rntal Management System</h3><br>
+				<h3>Bike & Car Rental Management System</h3><br>
 				<p>Built using Python and SQLite.</p>
 			</div>			
 			<div class="projectp">
@@ -183,7 +255,33 @@
 			
 		</section>		
 		
+		<section id="Contact" class="Contact">
+			<h1>Contact Me</h1>
+			<p>Email : abuzaransari.dev@gmail.com</p>
+			<p>Peerlist : https://peerlist.io/abuzaransaridev/</p>
+			<p>GitHub : https://github.com/abuzaransaridev/</p>			
+			<p>LinkedIn : https://www.linkedin.com/in/abuzar-ansari-dev/</p>
+			
+		</section>
 		
+		<footer id="footer">
+			<p>
+				 
+				&copy; 2025-2026	Abuzar Ansari. All Rights Reserved.
+			</p>
+			
+			<div class="link"><i>					
+				<a href="mailto:abuzaransari.dev@gmail.com"><i class="ri-mail-fill"></i> abuzaransari.dev@gmail.com</a>				
+				<a href="https://github.com/abuzaransaridev/" target="_blank"><i class="ri-github-fill"></i> GitHub</a>				
+				<a href="https://www.linkedin.com/in/abuzar-ansari-dev/" target="_blank"><i class="ri-linkedin-box-fill"></i> LinkedIn</a>					
+				<a href="https://peerlist.io/abuzaransaridev" target="_blank"><i class="ri-user-star-fill"></i> Peerlist</a>
+				
+				
+				
+				</i>
+			</div>
+		
+		</footer>
 		
 
 	</body>
