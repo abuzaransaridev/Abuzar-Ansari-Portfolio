@@ -37,9 +37,12 @@
 			}
 
 			nav {
-				text-align: center;
-				padding: 15px;
+				text-align: center;				
 				background-color: #222;
+				position:sticky;
+				justify-content:center;
+				top :0;
+				display:flex;
 			}
 			footer{
 				text-align: center;
@@ -50,11 +53,12 @@
 			nav a {
 				color: white;
 				text-decoration: none;
-				margin: 0 20px;			
+				padding:16px 16px;
+				display:block;
 			}
 
 			nav a:hover {
-					color:rgba(3, 40, 225, 0.936);
+					  background-color: #111111;
 			}
 
 			#Home img {
@@ -110,9 +114,9 @@
 				color: #cbd5e1;
 			}
 
-			.hero button {
+			.button1 {				
 				margin-top: 20px;
-				padding: 12px 30px;
+				padding: 12px 10px;
 				border: none;
 				border-radius: 10px;
 				background: #8b5cf6;
@@ -142,7 +146,65 @@
 			}
 
 
+			.box,
+			.textaa,
+			button2{
+				width:320px;
+				border-radius:10px;
+				margin-top:20px;
+				box-sizing:border-box;
+				background-color: #eef4ff;
+			}
 
+			.box{
+				height:40px;
+				background-color: #1e293b;
+				color: white;
+				border: 1px solid #334155;	
+				padding:10px;
+			}
+
+			.textaa{
+				height:180px;
+				padding-top:20px;
+				padding-left:10px;
+				font-size:16px;
+				resize:none;
+				background-color: #1e293b;
+				color: white;
+				border: 1px solid #334155;				
+			}
+
+			.button2{
+				height:40px;
+				cursor: pointer;
+			}
+			.connt{
+				cursor: pointer;
+				margin-bottom:0px;
+			}
+			
+			
+			.button2{
+
+				padding:12px;
+				margin-top:20px;
+				border:none;
+				border-radius:10px;
+				background:linear-gradient(135deg,#2563eb,#3b82f6);
+				color:white;
+				font-size:16px;
+				font-weight:bold;
+				cursor:pointer;
+				transition:0.3s;			
+			}
+			
+			.button2:hover{
+				transform:translateY(-2px);
+				box-shadow:0 8px 15px rgba(37,99,235,0.3);
+			}			
+			
+			
 			
 		</style>
 	</head>
@@ -151,6 +213,7 @@
 
 		<header>
 			<h1>Portfolio Website</h1>
+			<marquee scrollamount="8" behavior="alternate" style="color:#6366F1">💻 — CODE. LEARN. BUILD. REPEAT. 🚀 </marquee>
 		</header>
 
 		<nav>
@@ -170,11 +233,9 @@
 			<div class="hero">
 				<h1>Hi, I'm Abuzar Ansari 👋</h1>
 				<p>BCS Student | Python Developer | Aspiring Full-Stack Developer</p>
-				<button class="login_btn">Hire Me</button>
-				<a href="#Projects">
-					<button>View Projects</button>
-				</a>					
-			<button class="login_btn">Resume</button>
+				<button class="button1">Hire Me</button>
+				<a href="#Projects"><button class="button1">View Projects</button></a>					
+				<button class="button1">Resume</button>
 			</div>
 			
 		</main>
@@ -256,12 +317,41 @@
 		</section>		
 		
 		<section id="Contact" class="Contact">
-			<h1>Contact Me</h1>
-			<p>Email : abuzaransari.dev@gmail.com</p>
-			<p>Peerlist : https://peerlist.io/abuzaransaridev/</p>
-			<p>GitHub : https://github.com/abuzaransaridev/</p>			
-			<p>LinkedIn : https://www.linkedin.com/in/abuzar-ansari-dev/</p>
 			
+				<form method="GET">
+					
+					<label for="main">
+						<h1 class="connt">Contact us</h1>
+					</label><br>
+					
+					<input type="text"
+							id="main"
+							name="name"							
+							placeholder="Name"
+							required							
+							pattern="[A-Za-z ]+"
+							class ="box">
+							<br>
+					<input type="email"
+							id="email"
+							name="email"
+							placeholder="Email"
+							required							
+							class ="box"
+							><br>		
+						
+					<textarea
+							id="message"
+							name="message"
+							placeholder="Message..."
+							required
+							class ="textaa"></textarea><br>
+							
+					<button type="submit" class="button2" >Send Message</button>
+					
+				</form>
+				
+				
 		</section>
 		
 		<footer id="footer">
@@ -275,9 +365,7 @@
 				<a href="https://github.com/abuzaransaridev/" target="_blank"><i class="ri-github-fill"></i> GitHub</a>				
 				<a href="https://www.linkedin.com/in/abuzar-ansari-dev/" target="_blank"><i class="ri-linkedin-box-fill"></i> LinkedIn</a>					
 				<a href="https://peerlist.io/abuzaransaridev" target="_blank"><i class="ri-user-star-fill"></i> Peerlist</a>
-				
-				
-				
+							
 				</i>
 			</div>
 		
